@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package cosmos.v1;
+
+import "google/protobuf/timestamp.proto";
+
+message BlockStats {
+    uint64 block_height = 1;
+    string block_hash = 2;
+    google.protobuf.Timestamp block_time = 3;
+    string block_proposer = 4;
+
+    int64 parent_height = 5;
+    string parent_hash = 6;
+
+    uint64 num_txs = 7;
+}

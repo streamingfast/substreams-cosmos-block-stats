@@ -1,0 +1,29 @@
+specVersion: v0.1.0
+package:
+  name: cosmos_block_stats
+  version: v0.1.0
+  url: https://github.com/streamingfast/substreams-comos-block-stats
+  doc: |
+    create a substream that will output the block stats for cosmos block
+
+network: cosmos
+
+protobuf:
+  files:
+    - cosmos/v1/stats/stats.proto
+  importPaths:
+    - ./proto
+
+binaries:
+  default:
+    type: wasm/rust-v1
+    file: target/wasm32-unknown-unknown/release/cosmos_block_stats.wasm
+
+modules:
+  - name: block_to_stats
+    kind: map
+    initialBlock: 64987400
+    inputs:
+      - source: sf.cosmos.type.v2.Block
+    output:
+      type: proto:cosmos.v1.BlockStats
