@@ -8,6 +8,9 @@ package:
 
 network: cosmos
 
+imports:
+  cosmos: https://github.com/streamingfast/substreams-cosmos/releases/download/v0.1.1/cosmos-v0.1.0.spkg
+
 protobuf:
   files:
     - cosmos/v1/stats/stats.proto
