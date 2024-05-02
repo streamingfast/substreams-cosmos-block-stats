@@ -9,7 +9,7 @@ package:
 network: cosmos
 
 imports:
-  cosmos: https://github.com/streamingfast/substreams-cosmos/releases/download/v0.1.2/cosmos-v0.1.2.spkg
+  cosmos: https://github.com/streamingfast/substreams-cosmos/releases/download/v0.1.4/cosmos-v0.1.4.spkg
 
 protobuf:
   files:
